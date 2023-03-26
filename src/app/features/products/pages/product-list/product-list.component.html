@@ -1,0 +1,15 @@
+<section>
+    <div *ngFor="let product of products">
+        <div class="product-cont">
+            <div>
+                <p>{{product.name}}</p>
+                <p class="bold">{{product.price}} грн</p>
+            </div>
+            <div>
+                <button (click)="click(product.id)">Details</button>
+                <button (click)="delProduct(product.id)">Delete</button>
+                <button (click)="edit(product.id)">Edit</button>
+            </div>
+        </div>
+    </div>
+</section>

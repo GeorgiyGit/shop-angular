@@ -1,0 +1,38 @@
+.product-cont{
+    border: 1px solid gray;
+    border-radius: 8px;
+    box-shadow: 0 0 3px 1px gray;
+    padding: 5px 15px;
+    display: flex;
+    justify-content: space-between;
+}
+.product-cont>div{
+    display: flex;
+    gap: 5px;
+}
+.product-cont button{
+    background-color: #A6A867;
+    color: #51513D;
+    font-weight: bold;
+
+    border: 0 solid black;
+    border-radius: 8px;
+    padding: 0px 20px;
+    margin:8px;
+}
+.product-cont button:hover{
+    background-color: #51513D;
+    color: #A6A867;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+section{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}

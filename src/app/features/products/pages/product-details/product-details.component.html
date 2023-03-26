@@ -1,0 +1,16 @@
+<section>
+    <h2>{{product.name}}</h2>
+    
+    <div *ngFor="let cat of product.categories">
+        <p>{{cat.name}}</p>
+    </div>
+
+    <hr>
+    
+
+
+    <div>{{product.description}}</div>
+    
+    <div>{{product.price}}</div>
+
+</section>

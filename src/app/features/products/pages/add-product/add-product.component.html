@@ -1,0 +1,36 @@
+<section>
+
+
+    <form [formGroup]="productForm" (ngSubmit)="sumbit()">
+        <h2>Create New Product</h2>
+        <div class="column">
+            <label for="name">Product name</label>
+            <input type="text" id="name" formControlName="name" placeholder="your product name">
+        </div>
+        <div class="column">
+            <label for="price">Price</label>
+            <input type="number" id="price" formControlName="price" min="0" step="10" placeholder="your product price">
+        </div>
+        <div class="column">
+            <label for="description">Description</label>
+            <textarea id="description" formControlName="description" cols="30" rows="10"></textarea>
+        </div>
+        <div class="file-div column">
+            <label for="file">Add image</label>
+            <input type="file" id="file" (change)="addFile($event)">
+        </div>
+        <div class="images-cont">
+            <div class="image-cont" *ngFor="let image of images">
+                    <div class="instruments">
+                        <i class="material-icons" translate="no" (click)="remove(image.id)">disabled_by_default</i>
+                    </div>
+                    <img [src]="image.url">     
+            </div>
+        </div>
+        <div>
+            <app-category-list (selectedCategoryEvent)="addParent($event)"
+                [selectedCategories]="selectedCategories"></app-category-list>
+        </div>
+        <div class="center"><button type="submit" class="btn-blue">Let's start</button></div>
+    </form>
+</section>

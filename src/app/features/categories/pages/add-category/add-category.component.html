@@ -1,0 +1,20 @@
+<section>
+
+    <form [formGroup]="categoryForm" (ngSubmit)="sumbit()">
+        <h2>Create New Category</h2>
+        <div class="text-cont">
+            <label for="name">Category name</label>
+            <input type="text" id="name" formControlName="name" class="text" placeholder="blablabla">
+        </div>
+        <div class="file-div">
+            <label for="file">Add image</label>
+            <input type="file" id="file" (change)="changeFile($event)">
+        </div>
+        <div>
+            <img bind-src="url">
+        </div>
+        <div class="center">
+            <button type="submit" class="btn-blue">Let's start</button>
+        </div>
+    </form>
+</section>

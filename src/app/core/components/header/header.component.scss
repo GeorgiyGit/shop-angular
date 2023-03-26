@@ -1,0 +1,44 @@
+nav{
+    background-color: #e5e5e5;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+}
+
+.main-menu{
+    display: flex;
+    align-items: center;
+}
+.main-menu>ul{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+li{
+    margin: 0;
+    display: block;
+    padding: 10px 0;
+}
+a{
+    text-decoration: none;
+    color: #023e8a;
+}
+
+li:hover>a{
+    color: #000000;
+}
+
+.auth-cont{
+    display: flex;
+    align-items: center;
+}
+.auth-cont>ul{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}

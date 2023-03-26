@@ -1,0 +1,15 @@
+<div>
+    <div>
+        <input type="text" list="codes" (change)="select($event)">
+        <datalist id="codes">
+            <option [value]=""></option>
+            <option *ngFor="let c of categories" [value]="c.name">{{c.name}}</option>
+        </datalist>
+    </div>
+    <div class="cont-cont">
+        <div *ngFor="let category of selectedCategories" class="cont">
+            <p>{{category.name}}</p>
+            <i class="material-icons" translate="no" style="font-size:20px;" (click)="unSelect(category)">close</i>
+        </div>
+    </div>
+</div>
